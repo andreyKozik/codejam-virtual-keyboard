@@ -1,0 +1,141 @@
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+#main {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 250px;
+    opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 3s; /*Скорость перехода состояния элемента*/
+    animation: show 5s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0s; /* Задержка перед началом */
+}
+
+@keyframes show{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#textarea {
+    margin: 10px auto;
+    width: 900px;
+    height: 350px;
+    margin-bottom: 15px;
+    font-size: 30px; 
+    resize: none;
+    background-color: rgba(39, 40, 41, 0.61);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba(177, 176, 176, 0.685);
+    outline: none;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 0 2px 2px 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-position: center;
+    background-color: rgba(34, 35, 36, 0.671);
+    color: rgb(0, 0, 0);
+    background-image: url(../codejam-virtual-keyboard/assets/img/fone.jpg);
+    opacity: 0.85;
+    background-position: left;
+    border-radius: 3px;
+    font-weight: 800;
+    user-select: none;
+}
+
+section:hover {
+    display: flex;
+    border: 1px solid rgb(71, 233, 255);
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 810px;
+    height: 250px; 
+}
+
+
+#Backspace {
+    width: 104px;
+}
+
+#Tab{
+    width: 104px;
+}
+
+#CapsLock {
+    width: 77px;
+}
+
+#Enter {
+    width: 77px;
+}
+
+#ShiftLeft {
+    width: 104px;
+}
+
+#Space {
+    width: 374px;
+}
+
+#ShiftRight {
+    width: 104px;
+    animation: 5s move;
+}
+
+.change {
+    z-index: 2;
+    display: flex;
+    border: 1px solid rgb(71, 233, 255);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    transform: rotateX(360deg);
+    border-radius: 40px;
+    opacity: 1;
+}
+
+.changeCaps {
+    display: flex;
+    border: 1px solid rgb(71, 233, 255);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    transform: rotateX(360deg);
+    border-radius: 40px;
+}
+
+.changeShift {
+    display: flex;
+    border: 1px solid rgb(71, 233, 255);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    transform: rotateX(360deg);
+    border-radius: 40px;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+
